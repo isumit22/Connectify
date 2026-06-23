@@ -1,0 +1,16 @@
+https://Connectify.netlify.app/
+
+https://Connectify.netlify.app/auth/welcome/
+https://Connectify.netlify.app/auth/login/
+https://Connectify.netlify.app/auth/register/
+https://Connectify.netlify.app/auth/verify/
+https://Connectify.netlify.app/auth/forgot-password/
+https://Connectify.netlify.app/auth/reset-password/
+
+https://Connectify.netlify.app/auth/app/
+https://Connectify.netlify.app/auth/group/
+https://Connectify.netlify.app/auth/profile/
+https://Connectify.netlify.app/auth/contact/
+https://Connectify.netlify.app/auth/settings/
+
+https://Connectify.netlify.app/docs/tnc/
