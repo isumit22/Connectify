@@ -12,8 +12,10 @@ import HelmetHandler from "./utils/helmetHandler";
 
 import ReactGA from "react-ga4";
 
-if (process.env.REACT_APP_GA_ID !== "") {
-  ReactGA.initialize(process.env.REACT_APP_GA_ID);
+const GA_ID = process.env.REACT_APP_GA_ID;
+
+if (GA_ID && GA_ID.startsWith("G-")) {
+    ReactGA.initialize(GA_ID);
 }
 
 const vertical = "top";
