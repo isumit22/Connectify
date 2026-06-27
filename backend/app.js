@@ -44,7 +44,7 @@ const limiter = rateLimit({
 app.use("/", limiter); // limits rates of requests
 app.use(helmet()); // general security
 app.use(xss()); // xss protection
-app.use(mongoSanitize()); // sanitization for mongodb
+//app.use(mongoSanitize()); // sanitization for mongodb
 app.use(cookieParser()); // parsing cookies
 app.use(compression()); // gzip compression
 
