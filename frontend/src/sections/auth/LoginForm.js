@@ -65,7 +65,10 @@ const LoginForm = () => {
 
   // breakpoint
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down("md"));
-
+console.log(
+  "RECAPTCHA KEY:",
+  process.env.REACT_APP_RECAPTCHA_CLIENT
+);
   return (
     <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
       <Stack spacing={isSmallScreen ? 0 : 3}>
