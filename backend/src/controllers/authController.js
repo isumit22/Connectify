@@ -225,14 +225,22 @@ export const sendOtp = async (req, res, next) => {
     };
 
     try {
-      await transporter.sendMail(emailDetails);
-      return res.status(200).json({
-        status: "success",
-        message: "OTP Sent",
-      });
-    } catch (error) {
-      throw createHttpError.InternalServerError(`Failed to send OTP: ${error}`);
-    }
+  await transporter.sendMail(emailDetails);
+
+  return res.status(200).json({
+    status: "success",
+    message: "OTP Sent",
+  });
+} catch (error) {
+  console.error("=========== EMAIL ERROR ===========");
+  console.error(error);
+  console.error(error.message);
+  console.error(error.response);
+  console.error(error.responseCode);
+  console.error("===================================");
+
+  throw createHttpError.InternalServerError(error.message);
+}
   } catch (error) {
     next(error);
   }
