@@ -208,7 +208,7 @@ export const sendOtp = async (req, res, next) => {
     // OTP expiry
     const otp_expiry_time = Date.now() + 10 * 60 * 1000; // Expires in 10 minutes
 
-    // Updating OTP and expiry time
+    // Updating OTP and expiry 
     user.otp = new_otp;
     user.otp_expiry_time = otp_expiry_time;
     user.otp_last_sent_time = Date.now();
